@@ -28,6 +28,9 @@
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-4">
+				<div style="text-align:center">
+					<h4>Calculator tipe I</h4>
+				</div>
 				<div ng-controller="Calculate2NumberCtrl">
 					Input first number: <input ng-model="a" ng-keyup="AddNumber()" ng-init="a=0"><br>
 					Input second number: <input ng-model="b" ng-keyup="AddNumber()" ng-init="b=0"><br>
@@ -37,9 +40,39 @@
 					Hasil Pembagian: {{ division }}<br>
 					Hasil Perpangkatan: {{ power }}<br>
 				</div>
+				<br>
+				<div style="text-align:center">
+					<h4>Calculator tipe II</h4>
+				</div>
+				<div ng-controller="Calculate2NumberCtrl2">
+					<div class="calculatorBody">
+						<div class="topBorder">
+							<span><button name="btnClear" class="btnClear" ng-click="Clear()">C</button></span>
+							<div class="screen"> {{ output }}<br>{{ operator }}</div>
+						</div><br>
+						<div class="calculatorButton">
+							<button name="btn1" class="btn" value="1" ng-click="Output(1)">1</button>
+							<button name="btn2" class="btn" value="2" ng-click="Output(2)">2</button>
+							<button name="btn3" class="btn" value="3" ng-click="Output(3)">3</button>
+							<button name="btnBagi" class="btn"  ng-click="Divide()">:</button><br>
+							<button name="btn4" class="btn" value="4" ng-click="Output(4)">4</button>
+							<button name="btn5" class="btn" value="5" ng-click="Output(5)">5</button>
+							<button name="btn6" class="btn" value="6" ng-click="Output(6)">6</button>
+							<button name="btnKali" class="btn" ng-click="Multiplication()">*</button><br>
+							<button name="btn7" class="btn" value="7" ng-click="Output(7)">7</button>
+							<button name="btn8" class="btn" value="8" ng-click="Output(8)">8</button>
+							<button name="btn9" class="btn" value="9" ng-click="Output(9)">9</button>
+							<button name="btnKurang" class="btn" ng-click="Substract()">-</button><br>
+							<button name="btn0" class="btn" value="0" ng-click="Output(0)">0</button>
+							<button name="btnKoma" class="btn" value="." ng-click="Output(.)">.</button>
+							<button name="btnPlus" class="btn" ng-click="Plus()">+</button>
+							<button name="btnSamaDgn" class="btn" ng-click="SamaDengan()">=</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<footer ng-controller="DateController" style="background-color:lightblue;color:white">
+		<footer ng-controller="DateCtrl" style="background-color:lightblue;color:white">
 			<h3>&copy; {{ today | date }} - TauficLeonardoSutejo</h3>
 		</footer>
 		<!--End of footer-->
